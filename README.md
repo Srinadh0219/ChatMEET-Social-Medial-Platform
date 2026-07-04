@@ -1,6 +1,6 @@
 # 🌐 Premium Social Media Platform
 
-A full-featured, responsive, and modern social media application built using **React, TypeScript, Node.js, Express, PostgreSQL.
+A full-featured, responsive, and modern social media application built using **React, TypeScript, Node.js, Express, PostgreSQL**.
 
 Designed with clean typography, dynamic user interfaces, real-time communication, and robust database models.
 
@@ -10,6 +10,7 @@ Designed with clean typography, dynamic user interfaces, real-time communication
 
 ### 🔐 User Authentication & Profiles
 - **Secure Authentication**: Register and Login with passwords securely hashed using `bcryptjs`.
+- **Password Recovery**: Complete Forgot Password flow with secure OTP verification and password reset capabilities.
 - **Dynamic Profiles**: 
   - Change profile pictures, email, name, and passwords.
   - Customize your profile with a personalized bio.
@@ -17,7 +18,7 @@ Designed with clean typography, dynamic user interfaces, real-time communication
   - Profile tabs displaying user posts, followers, and following lists.
 
 ### 📝 Posts & Interactions
-- **Rich Media Posts**: Create posts with text captions and images.
+- **Rich Media Posts**: Create posts with text captions and seamless image uploads powered by **Cloudinary**.
 - **Engagement**: Like and unlike posts instantly.
 - **Comments**:
   - Add comments to posts.
@@ -31,8 +32,13 @@ Designed with clean typography, dynamic user interfaces, real-time communication
   - Live typing indicators.
   - Group and private chat spaces.
   - User search with auto-complete for fast chat creation.
+  - **Media Previews**: Preview selected images before sending them in chat.
   - Instant notifications for incoming messages.
 - **Theme Customization**: Beautiful light and dark mode toggles for the chat environment.
+
+### 📱 Core Application Enhancements
+- **Fully Mobile Responsive**: Optimized layouts ensuring a flawless experience on smartphones, tablets, and desktops.
+- **Feedback System**: Built-in modals allowing users to report bugs or submit feedback directly to the developers.
 
 ---
 
@@ -46,11 +52,12 @@ Designed with clean typography, dynamic user interfaces, real-time communication
 - **Lucide React** (beautiful icons)
 - **Socket.io Client** (real-time events)
 
-### Backend & Database
+### Backend & Infrastructure
 - **Node.js** & **Express**
 - **TypeScript** & **TS-Node**
-- **PostgreSQL** (relational database)
+- **PostgreSQL** (relational database, hosted on **Neon**)
 - **Socket.io** (WebSocket server integration)
+- **Cloudinary** (Cloud image storage and optimization)
 
 ---
 
