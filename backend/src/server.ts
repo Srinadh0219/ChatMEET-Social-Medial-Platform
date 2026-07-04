@@ -31,7 +31,12 @@ const server = http.createServer(app);
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: ["http://localhost:3000", "http://localhost:3002"],
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:3002",
+      "http://localhost:5173",
+      "https://chatmeetapp.netlify.app"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },
