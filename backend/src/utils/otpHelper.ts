@@ -30,11 +30,14 @@ export const sendOtpEmail = async (email: string, otp: string): Promise<void> =>
 
   // Create transporter for Gmail SMTP
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // false for 587
     auth: {
       user: user,
       pass: pass,
     },
+    connectionTimeout: 10000, // 10 seconds timeout so frontend doesn't hang forever
   });
 
   const mailOptions = {
