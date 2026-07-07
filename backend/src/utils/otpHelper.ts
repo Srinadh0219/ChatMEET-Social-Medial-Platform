@@ -38,7 +38,8 @@ export const sendOtpEmail = async (email: string, otp: string): Promise<void> =>
       pass: pass,
     },
     connectionTimeout: 10000, // 10 seconds timeout so frontend doesn't hang forever
-  });
+    family: 4 // Force IPv4 to bypass Render IPv6 routing bugs
+  } as any);
 
   const mailOptions = {
     from: `"ChatMEET" <${user}>`,
@@ -76,12 +77,16 @@ export const sendFeedbackEmail = async (userEmail: string, type: 'feedback' | 'b
   }
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // false for 587
     auth: {
       user: user,
       pass: pass,
     },
-  });
+    connectionTimeout: 10000,
+    family: 4 // Force IPv4 to bypass Render IPv6 routing bugs
+  } as any);
 
   const subject = type === 'bug' ? '🐛 New Bug Report - ChatMEET' : '💡 New Feedback - ChatMEET';
   const headerColor = type === 'bug' ? '#ef4444' : '#0ea5e9';
