@@ -2,6 +2,8 @@ import { Buffer } from 'buffer';
 if (!(Buffer as any).SlowBuffer) {
   (Buffer as any).SlowBuffer = class {};
 }
+import dns from 'dns';
+dns.setDefaultResultOrder('ipv4first'); // Force IPv4 to fix Render's IPv6 ENETUNREACH error
 import express from 'express';
 import http from 'http';
 import { Server } from 'socket.io';
