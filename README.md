@@ -4,6 +4,7 @@ A full-featured, responsive, and modern social media application built using **R
 
 Designed with clean typography, dynamic user interfaces, real-time communication, and robust database models.
 
+**Live Demo:** [https://chatmeetapp.netlify.app](https://chatmeetapp.netlify.app)
 ---
 
 ## ✨ Features
